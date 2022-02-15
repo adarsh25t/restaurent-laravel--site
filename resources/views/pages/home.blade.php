@@ -59,4 +59,54 @@
         <img src="{{ asset('images/about-right.jpg') }}" alt="">
     </div>
 </div>
+{{-- menu section --}}
+<div class="menu">
+    <h3>Our menu</h3>
+    <h4>Our selection of food with quality taste</h4>
+    <div class="menu_items">
+        <div class="menu_item">
+            <img src="{{ asset("images/menu-1.jpg") }}" alt="">
+            <h5>Burger</h5>
+            <span>10$</span>
+        </div>
+        <div class="menu_item">
+            <img src="{{ asset("images/menu-2.jpg") }}" alt="">
+            <h5>Hawaiian Chicken PizzaSmoked</h5>
+            <span>20$</span>
+        </div>
+        <div class="menu_item">
+            <img src="{{ asset("images/menu-1.jpg") }}" alt="">
+            <h5>Burger</h5>
+            <span>6$</span>
+        </div>
+        <div class="menu_item">
+            <img src="{{ asset("images/menu-2.jpg") }}" alt="">
+            <h5>Hawaiian Chicken PizzaSmoked</h5>
+            <span>10$</span>
+        </div>
+    </div>
+    <button class="view-menu">View More Menu</button>
+</div>
+{{-- chef section --}}
+<div class="chef">
+    <h3>Our chef</h3>
+    <h4>We offer the best ingredients for you</h4>
+    <div class="chefs">
+        <div class="chef">
+            <img src="{{ asset('images/chef-1.jpg') }}" alt="">
+            <h5>David Martin</h5>
+            <span>Cookie Chef</span>
+        </div>
+        <div class="chef">
+            <img src="{{ asset('images/chef-2.jpg') }}" alt="">
+            <h5>David Martin</h5>
+            <span>Cookie Chef</span>
+        </div>
+        <div class="chef">
+            <img src="{{ asset('images/chef-3.jpg') }}" alt="">
+            <h5>David Martin</h5>
+            <span>Cookie Chef</span>
+        </div>
+    </div>
+</div>
 @endsection

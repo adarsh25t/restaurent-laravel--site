@@ -3,7 +3,7 @@
     --logo-color:#6d5c0e;
     --text-color:#fff;
     --button-color:#8f0521;
-    --dark-color:#000;
+    --dark-color:rgb(3, 35, 41);
     --light-color:#3a3a3a;
 }
 
@@ -111,7 +111,7 @@ nav ul li a.active{
     display: flex;
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .about-content h3{
     font-family: 'Poppins', sans-serif;
@@ -121,7 +121,7 @@ nav ul li a.active{
 }
 .about-content h4{
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight:700;
     font-size: 30px;
     color: var(--dark-color);
     width: 60%;
@@ -147,4 +147,76 @@ nav ul li a.active{
 }
 .about-right img:hover{
     transform: scale(.9);
+}
+/*  ----------------  -------------------  --------menu page -----------  ------------- ----------------------  ------------*/
+.menu{
+    height: 70vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 100px;
+    position: relative;
+}
+.menu h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: var(--logo-color);
+    font-weight: 600;
+}
+.menu h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight:700;
+    font-size: 30px;
+    color: var(--dark-color);
+    width: 30%;
+    text-transform: lowercase;
+}
+.menu_items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.menu_items .menu_item{
+    width: 300px;
+    height: 150px;
+    position: relative;
+}
+.menu_items .menu_item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.menu_items .menu_item h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    background-color: var(--logo-color);
+    width: 100%;
+    padding: 10px 10px;
+    color: var(--text-color);
+}
+.menu_items .menu_item span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 8px;
+    border-bottom-right-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.view-menu{
+    position: absolute;
+    left: 45%;
+    background-color: var(--button-color);
+    bottom: 0px;
+    border: none;
+    color: var(--text-color);
+    padding: 10px 35px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.664);
 }
