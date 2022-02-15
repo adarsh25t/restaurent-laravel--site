@@ -314,3 +314,40 @@ nav ul li a.active{
     margin-top: -13px;
     font-weight: 300;
 }
+
+/* ------------------ -----------------  ------- book a table page ---------  ------------ ------------  ---------------*/
+.book_a_table{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: radial-gradient(rgba(109, 91, 14, 0.664),rgba(108, 91, 14, 0.635)), url('https://images.unsplash.com/photo-1615937722923-67f6deaf2cc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book_ads{
+    width: 400px;
+    text-align: center;
+}
+.book_ads h3{
+    font-family: 'Cookie', cursive;
+    color: var(--logo-color);
+}
+.book_ads h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+.book_ads p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.book_ads button{
+    background-color: var(--button-color);
+    padding: 8px 35px;
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.664);
+}

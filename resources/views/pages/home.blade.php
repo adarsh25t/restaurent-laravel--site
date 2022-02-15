@@ -87,6 +87,15 @@
     </div>
     <button class="view-menu">View More Menu</button>
 </div>
+{{-- book_a_table --}}
+<div class="book_a_table">
+    <div class="book_ads">
+        <h3>Chops & Hops</h3>
+        <h4>Book A Table Now</h4>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <button>Book A Table</button>
+    </div>
+</div>
 {{-- chef section --}}
 <div class="Chef">
     <h3>Our chef</h3>
