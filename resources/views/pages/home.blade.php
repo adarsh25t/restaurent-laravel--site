@@ -39,4 +39,24 @@
         </div>
       </div>
 </div>
+
+{{-- about section --}}
+<div class="about">
+    <div class="about-left">
+        <div class="about-content">
+            <h3>About Us</h3>
+            <h4>WE LEAVE A DELICIOUS MEMORY FOR YOU</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quos, cum minus repellat fugiat hic, sunt beatae et explicabo necessitatibus mollitia, minima eum quibusdam aliquid.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia reprehenderit</p>
+        </div>
+        <div class="about-images">
+            <img src="{{ asset('images/about-1.jpg') }}" alt="">
+            <img src="{{ asset('images/about-2.jpg') }}" alt="">
+            <img src="{{ asset('images/about-3.jpg') }}" alt="">
+        </div>
+    </div>
+    <div class="about-right">
+        <img src="{{ asset('images/about-right.jpg') }}" alt="">
+    </div>
+</div>
 @endsection

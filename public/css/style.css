@@ -4,6 +4,7 @@
     --text-color:#fff;
     --button-color:#8f0521;
     --dark-color:#000;
+    --light-color:#3a3a3a;
 }
 
 nav{
@@ -102,4 +103,48 @@ nav ul li a.active{
     border-radius: 50%;
     margin-left: 15px !important;
     background-color: var(--logo-color) !important;
+}
+
+/*  ----------------  -------------------  --------about us page -----------  ------------- ----------------------  ------------*/
+.about{
+    height: 60vh;
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+.about-content h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: var(--logo-color);
+    font-weight: 600;
+}
+.about-content h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--dark-color);
+    width: 60%;
+}
+.about-content p{
+    width: 70%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--light-color);
+}
+.about-images img{
+    width: 170px;
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.877);
+}
+.about-images img:not(:first-child){
+    margin-left: 15px;
+}
+.about-right img{
+    width: 500px;
+    height: 400px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.664);
+    border-radius: 5px;
+    transition: 1.3s;
+}
+.about-right img:hover{
+    transform: scale(.9);
 }
