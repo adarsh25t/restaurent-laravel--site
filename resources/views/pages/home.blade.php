@@ -88,7 +88,7 @@
     <button class="view-menu">View More Menu</button>
 </div>
 {{-- chef section --}}
-<div class="chef">
+<div class="Chef">
     <h3>Our chef</h3>
     <h4>We offer the best ingredients for you</h4>
     <div class="chefs">

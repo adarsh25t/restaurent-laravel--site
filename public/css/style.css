@@ -220,3 +220,63 @@ nav ul li a.active{
     font-family: 'Poppins', sans-serif;
     box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.664);
 }
+
+/* -------------  -------------  -------------- our chef page  -------------  -------------  -----------------*/
+
+.Chef{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 100px;
+}
+.Chef h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: var(--logo-color);
+    font-weight: 600;
+}
+.Chef h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight:700;
+    font-size: 30px;
+    color: var(--dark-color);
+    width: 30%;
+    text-transform: lowercase;
+}
+
+.chefs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.chefs .chef{
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--logo-color);
+    padding-bottom: 10px;
+}
+.chefs .chef img{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+.chefs .chef h5{
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    padding-top: 5px;
+}
+.chefs .chef span{
+    color: var(--light-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-top: -6px;
+    font-weight: 600;
+}
