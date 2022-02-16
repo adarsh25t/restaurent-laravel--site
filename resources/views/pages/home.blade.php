@@ -15,24 +15,24 @@
           <div class="carousel-item active">
             <img src="{{ asset('images/bg-1.jpg') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="title">Chops & Hops</h5>
-              <p class="sub-title">THE BEST EXPERIENCE</p>
+              <h5 class="titles">Chops & Hops</h5>
+              <p class="sub-titles">THE BEST EXPERIENCE</p>
               <button class="booking-table">Book Your Table</button>
             </div>
           </div>
           <div class="carousel-item">
             <img src="{{ asset('images/bg-2.jpg') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5 class="title">Chops & Hops</h5>
-                <p class="sub-title">THE BEST EXPERIENCE</p>
+                <h5 class="titles">Chops & Hops</h5>
+                <p class="sub-titles">THE BEST EXPERIENCE</p>
                 <button class="booking-table">View Your Menu</button>
               </div>
           </div>
           <div class="carousel-item">
             <img src="{{ asset('images/bg-3.jpg') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5 class="title">Chops & Hops</h5>
-                <p class="sub-title">THE BEST EXPERIENCE</p>
+                <h5 class="titles">Chops & Hops</h5>
+                <p class="sub-titles">THE BEST EXPERIENCE</p>
                 <button class="booking-table">Contact Me</button>
               </div>
           </div>
@@ -44,8 +44,8 @@
 <div class="about">
     <div class="about-left">
         <div class="about-content">
-            <h3>About Us</h3>
-            <h4>WE LEAVE A DELICIOUS MEMORY FOR YOU</h4>
+            <h3 class="title">About Us</h3>
+            <h4 class="sub-title">WE LEAVE A DELICIOUS MEMORY FOR YOU</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quos, cum minus repellat fugiat hic, sunt beatae et explicabo necessitatibus mollitia, minima eum quibusdam aliquid.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia reprehenderit</p>
         </div>
@@ -61,8 +61,8 @@
 </div>
 {{-- menu section --}}
 <div class="menu">
-    <h3>Our menu</h3>
-    <h4>Our selection of food with quality taste</h4>
+    <h3 class="title">Our menu</h3>
+    <h4 class="sub-title">Our selection of food with quality taste</h4>
     <div class="menu_items">
         <div class="menu_item">
             <img src="{{ asset("images/menu-1.jpg") }}" alt="">
@@ -98,8 +98,8 @@
 </div>
 {{-- chef section --}}
 <div class="Chef">
-    <h3>Our chef</h3>
-    <h4>We offer the best ingredients for you</h4>
+    <h3 class="title">Our chef</h3>
+    <h4 class="sub-title">We offer the best ingredients for you</h4>
     <div class="chefs">
         <div class="chef">
             <img src="{{ asset('images/chef-1.jpg') }}" alt="">
@@ -118,6 +118,22 @@
         </div>
     </div>
 </div>
+<div class="details">
+    <div class="address">
+        <h3>Our Address</h3>
+        <p>Lefreak Building, 2 AlBahr St, Down Santa Monica, Los Angeles</p>
+    </div>
+    <div class="opening-time">
+        <h3>Opening Hours</h3>
+        <span>Mon - Fri: 10 AM - 11 PM</span><br>
+        <span class="details-last-span">Sat - Sun: 9 AM - 1 PM</span>
+    </div>
+    <div class="Private">
+        <h3>Private Dinning</h3>
+        <span>Email: Chops&Hops@gmail.com</span><br>
+        <span class="details-last-span">Phone: 02 015680721</span>
+    </div>
+</div>
 {{-- footer --}}
 <div class="footer">
     <div class="footer-icon">
@@ -130,8 +146,8 @@
         <h3>Chops & Hops</h3>
     </div>
     <div class="footer-copyright">
-        <p>© copyright Chops & Hops </p>
-        <h6>Design by ADARSH .T</h6>
+        <p>© copyright Chops & Hops Design by ADARSH .T</p>
+
     </div>
 </div>
 @endsection
