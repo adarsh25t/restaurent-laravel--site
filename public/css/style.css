@@ -32,6 +32,7 @@ nav{
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'Poppins', sans-serif;
+    z-index: 1000;
 }
 nav h3{
     font-family: 'Cookie', cursive;
@@ -57,9 +58,12 @@ nav ul li a.active{
     color: var(--button-color);
 }
 .fa-bell{
-    margin-right: 15px;
+    margin-right: 10px;
     font-size: 18px;
     color: var(--logo-color);
+}
+.authentication{
+    position: relative;
 }
 .authentication button{
     padding: 8px 25px;
@@ -73,7 +77,36 @@ nav ul li a.active{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
-
+.user-image{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sub-nav{
+    position: absolute;
+    top: -260px;
+    right: 0px;
+    z-index: 10;
+    background-color: var(--text-color);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: 1s;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+}
+.active-sub-nav{
+    top: 60px;
+}
+.sub-nav a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: var(--logo-color);
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--light-dark);
+    font-size: 14px;
+}
 /*-------------  -------------- -------- home page --------------- --------------  ----------*/
 .hero{
     height: 90vh;
