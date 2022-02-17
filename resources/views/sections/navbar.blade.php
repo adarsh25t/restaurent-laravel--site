@@ -10,6 +10,7 @@
         <li><a href="">Contact</a></li>
     </ul>
     <div class="authentication">
+        <i class="far fa-bell"></i>
         <button><a href="">Login</a></button>
     </div>
 </nav>

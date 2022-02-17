@@ -56,6 +56,11 @@ nav ul li a{
 nav ul li a.active{
     color: var(--button-color);
 }
+.fa-bell{
+    margin-right: 15px;
+    font-size: 18px;
+    color: var(--logo-color);
+}
 .authentication button{
     padding: 8px 25px;
     border: none;
