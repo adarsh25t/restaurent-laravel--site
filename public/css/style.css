@@ -513,3 +513,65 @@ nav ul li a.active{
 .menu-details .category{
     color: var(--light-dark);
 }
+
+/*---------------------------------- ------- login page --------------- ---------------- ---------------------------- --------- */
+.login-wrapper{
+    height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapper form{
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.527);
+}
+.login-wrapper form h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    color: var(--logo-color);
+    font-weight: 600;
+}
+.login-wrapper form .login-inputs{
+    margin-top: 20px;
+}
+.login-inputs label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+.login-inputs input{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    outline: none;
+    padding: 7px 10px;
+    border: 1px solid var(--light-dark);
+    font-size: 14px;
+    border-radius: 5px
+}
+.login-submit{
+    width: 100%;
+    margin-top: 25px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding: 7px 10px;
+}
+.login-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--dark-color);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* ----------------------------- ------------------------ register wrapper ----------------------- ------------------ ----------------- */
+.register-wrapper{
+    height: 100vh;
+}

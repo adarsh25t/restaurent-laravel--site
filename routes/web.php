@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
@@ -21,3 +23,6 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/tableBook',[TableBookingController::class,'index'])->name('tableBook');
 Route::get('/menu',[MenuController::class,"index"])->name('menu');
 Route::get('/cart',[CartController::class,"index"])->name('cart');
+
+Route::get('/register',[RegisterController::class,"index"])->name('register');
+Route::get('/login',[LoginController::class,"index"])->name('login');

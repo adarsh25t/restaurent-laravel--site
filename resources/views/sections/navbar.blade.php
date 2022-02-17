@@ -11,6 +11,6 @@
     </ul>
     <div class="authentication">
         <i class="far fa-bell"></i>
-        <button><a href="">Login</a></button>
+        <button><a href="{{ route('login') }}">Login</a></button>
     </div>
 </nav>
