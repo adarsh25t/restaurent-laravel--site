@@ -40,5 +40,7 @@ Route::get('/logout',[LogoutController::class,"store"])->name('logout');
 
 
 Route::group(['middleware' => ['auth','isAdmin']],function(){
-    Route::get('/admin',[AdminController::class,"index"])->name('admin');
+    Route::get('/admins',[AdminController::class,"index"])->name('admin');
 });
+
+Route::get('/AllUsers',[AdminController::class,"user"])->name('AllUsers');

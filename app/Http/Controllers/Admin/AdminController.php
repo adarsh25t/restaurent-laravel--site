@@ -12,4 +12,9 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
+
+    public function user()
+    {
+        return view('admin.allUsers');
+    }
 }
