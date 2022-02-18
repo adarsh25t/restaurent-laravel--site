@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AlertPageController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -34,3 +35,10 @@ Route::post('/register',[RegisterController::class,"store"]);
 Route::get('/login',[LoginController::class,"index"])->name('login');
 Route::post('/login',[LoginController::class,"store"]);
 Route::get('/logout',[LogoutController::class,"store"])->name('logout');
+
+
+
+
+Route::group(['middleware' => ['auth','isAdmin']],function(){
+    Route::get('/admin',[AdminController::class,"index"])->name('admin');
+});

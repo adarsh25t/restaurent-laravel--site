@@ -84,7 +84,7 @@ nav ul li a.active{
 }
 .sub-nav{
     position: absolute;
-    top: -260px;
+    top: -360px;
     right: 0px;
     z-index: 10;
     background-color: var(--text-color);
