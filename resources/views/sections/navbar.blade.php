@@ -10,23 +10,25 @@
         <li><a href="">Contact</a></li>
     </ul>
     <div class="authentication">
-        @auth
+
+        @guest
         <div>
             <a href="{{ route('alert') }}"><i class="far fa-bell"></i></a>
             <button><a href="{{ route('login') }}">Login</a></button>
         </div>
-        @endauth
+        @endguest
 
-        @guest
+        @auth
             <a href="{{ route('alert') }}"><i class="far fa-bell"></i></a>
             <img src="{{ asset('images/chef-1.jpg') }}" alt="" class="user-image">
             <div class="sub-nav">
-                <a href="">ADARSH</a>
+                <a href="">{{ auth()->user()->name }}</a>
                 <a href="">Profile</a>
                 <a href="">Cart</a>
                 <a href="">Your Orders</a>
+                <a href="{{ route('logout') }}">Logout</a>
             </div>
-        @endguest
+        @endauth
     </div>
 </nav>
 

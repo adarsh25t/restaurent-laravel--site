@@ -4,17 +4,20 @@
 @include('sections.navbar')
 
 <div class="login-wrapper">
-    <form action="">
+    <form action="{{ route('login') }}" method="post">
+        @csrf
         <h4>Sign in to Chops & Hops</h4>
 
         <div class="login-inputs">
             <label for="phone">Phone Number</label>
-            <input type="number" name="phone" placeholder="Enter Phone Number">
+            <input type="text" name="email" placeholder="Enter Phone Number" @error('email') class="input-error-border" @enderror>
+            @error('email') <p class="input-error">{{ $message }}</p> @enderror
         </div>
 
         <div class="login-inputs">
             <label for="password">Password</label>
-            <input type="number" name="password" placeholder="Enter Password">
+            <input type="password" name="password" placeholder="Enter Password" @error('password') class="input-error-border" @enderror>
+            @error('password') <p class="input-error">{{ $message }}</p> @enderror
         </div>
 
         <input type="submit" value="Sign in  Chops & Hops" class="login-submit">
