@@ -1,0 +1,26 @@
+.addFood-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.addFood-form form{
+    background-color: #191c24;
+    padding: 30px;
+    width: 450px;
+}
+.addFood-form form h4{
+    text-align: center;
+}
+.addFood-form .login-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.addFood-form .login-inputs input{
+   margin-bottom: 10px;
+   margin-top: 10px;
+   height: 40px;
+}
+.addFood-form .login-submit{
+    width: 100%;
+}

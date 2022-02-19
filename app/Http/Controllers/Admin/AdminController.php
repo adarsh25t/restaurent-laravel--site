@@ -26,4 +26,14 @@ class AdminController extends Controller
         $user->delete();
         return redirect()->route('AllUsers');
     }
+
+    public function AllFood()
+    {
+        return view('admin.allFoods');
+    }
+
+    public function addFood()
+    {
+        return view('admin.addFood');
+    }
 }
