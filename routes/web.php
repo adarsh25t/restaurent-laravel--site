@@ -55,5 +55,12 @@ Route::get('/editFood/{id}',[AdminController::class,"editFood"])->name('editFood
 Route::post('/editFood/{id}',[AdminController::class,"uploadEditFood"])->name('uploadEditFood');
 Route::get('/deleteFood/{id}',[AdminController::class,"deleteFood"])->name('deleteFood');
 
+Route::get('/viewChef',[AdminController::class,"viewChef"])->name('viewChef');
+Route::get('/addChef',[AdminController::class,"addChef"])->name('addChef');
+Route::post('/addChef',[AdminController::class,"storeChef"])->name('storeChef');
+Route::get('/editChef/{id}',[AdminController::class,"editChef"])->name('editChef');
+Route::post('/editChef/{id}',[AdminController::class,"uploadChef"])->name('uploadChef');
+Route::get('/deleteChef/{id}',[AdminController::class,"deleteChef"])->name('deleteChef');
+
 // user section
 Route::post('/reservation',[AdminController::class,"addReservation"])->name('addReservation');

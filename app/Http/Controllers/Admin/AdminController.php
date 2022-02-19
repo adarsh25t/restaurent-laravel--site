@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Chef;
 use App\Models\Food;
 use App\Models\Reservation;
 use App\Models\User;
@@ -112,5 +113,61 @@ class AdminController extends Controller
         $reservations = Reservation::all();
 
         return view('admin.allReservations',compact('reservations'));
+    }
+
+    public function viewChef()
+    {
+        $chefs = Chef::all();
+        return view('admin.allChef',compact('chefs'));
+    }
+
+    public function addChef()
+    {
+        return view('admin.addChef');
+    }
+
+    public function storeChef(Request $request)
+    {
+        $image = $request->image;
+        $imageName = time()."-".$image->getClientOriginalExtension();
+        $request->image->move('chef',$imageName);
+
+        Chef::create([
+            'name'=>$request->name,
+            'speciality'=>$request->speciality,
+            'image_path'=>$imageName
+        ]);
+
+        return redirect()->route('viewChef');
+    }
+
+    public function editChef($id)
+    {
+        $chef = Chef::find($id);
+        return view('admin.editChef',compact('chef'));
+    }
+
+    public function uploadChef(Request $request, $id)
+    {
+        $chef = Chef::find($id);
+        $image = $request->image;
+        $imageName = time()."-".$image->getClientOriginalExtension();
+        $request->image->move("chef",$imageName);
+
+        $chef->update([
+            "name"=>$request->name,
+            "speciality"=>$request->speciality,
+            "description"=>$request->description,
+            "image_path"=>$imageName
+        ]);
+
+        return redirect()->route('viewChef');
+    }
+
+    public function deleteChef($id)
+    {
+        $chef = Chef::find($id);
+        $chef->delete();
+        return redirect()->route('viewChef');
     }
 }
