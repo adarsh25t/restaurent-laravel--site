@@ -44,3 +44,4 @@ Route::group(['middleware' => ['auth','isAdmin']],function(){
 });
 
 Route::get('/AllUsers',[AdminController::class,"user"])->name('AllUsers');
+Route::get('/deleteUser/{id}',[AdminController::class,"deleteUser"])->name('deleteUser');
