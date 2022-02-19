@@ -1,3 +1,12 @@
+:root{
+    --logo-color:#6d5c0e;
+    --text-color:#fff;
+    --button-color:#8f0521;
+    --dark-color:rgb(13, 19, 20);
+    --light-color:#3a3a3a;
+    --light-dark:#999999;
+}
+
 .addFood-form{
     display: flex;
     justify-content: center;
@@ -23,4 +32,41 @@
 }
 .addFood-form .login-submit{
     width: 100%;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 0px;
+}
+
+/* --------------------------------------- -------------allFood page ----------------------------------------------- */
+.card-body-item{
+    display: flex;
+    justify-content: space-between;
+}
+.card-body-item a{
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--button-color);
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+.food-description{
+    width: 300px !important;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+   
+}
+.food-description p{
+    width: 40% !important;
+}
+
+/* ------------------------- -------------------------editFood page --------------------------------- ----------------------- */
+.login-inputs img{
+    width: 150px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.login-inputs select{
+    height: 40px;
 }

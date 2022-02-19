@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Food;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
    
     public function index()
     {
@@ -29,11 +34,59 @@ class AdminController extends Controller
 
     public function AllFood()
     {
-        return view('admin.allFoods');
+        $foods = Food::all();
+        return view('admin.allFoods',compact('foods'));
     }
 
     public function addFood()
     {
         return view('admin.addFood');
+    }
+
+    public function uploadFood(Request $request)
+    {
+        $image = $request->image;
+        $imageName = time()."-".$image->getClientOriginalExtension();
+        $request->image->move("foodImage",$imageName);
+
+        Food::create([
+            "Title"=>$request->name,
+            "price"=>$request->price,
+            "description"=>$request->description,
+            "category"=>$request->category,
+            "image_path"=>$imageName
+        ]);
+        return redirect()->route('AddFood');
+    }
+
+    public function editFood($id)
+    {
+        $Food = Food::find($id);
+        return view('admin.editFood',compact('Food'));
+    }
+
+    public function uploadEditFood(Request $request,$id)
+    {
+        $Food = Food::find($id);
+
+        $image = $request->image;
+        $imageName = time()."-".$image->getClientOriginalExtension();
+        $request->image->move("foodImage",$imageName);
+
+        $Food->update([
+            "Title"=>$request->name,
+            "price"=>$request->price,
+            "description"=>$request->description,
+            "category"=>$request->category,
+            "image_path"=>$imageName
+        ]);
+        return redirect()->route('AllFood');
+    }
+
+    public function deleteFood($id)
+    {
+        $Food = Food::find($id);
+        $Food->delete();
+        return redirect()->route('AllFood');
     }
 }

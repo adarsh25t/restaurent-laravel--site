@@ -48,3 +48,8 @@ Route::get('/deleteUser/{id}',[AdminController::class,"deleteUser"])->name('dele
 
 Route::get('/AllFoods',[AdminController::class,"AllFood"])->name('AllFood');
 Route::get('/AddFood',[AdminController::class,"addFood"])->name('AddFood');
+
+Route::post('/uploadFood',[AdminController::class,"uploadFood"])->name('uploadFood');
+Route::get('/editFood/{id}',[AdminController::class,"editFood"])->name('editFood');
+Route::post('/editFood/{id}',[AdminController::class,"uploadEditFood"])->name('uploadEditFood');
+Route::get('/deleteFood/{id}',[AdminController::class,"deleteFood"])->name('deleteFood');

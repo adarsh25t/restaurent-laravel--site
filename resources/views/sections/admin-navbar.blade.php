@@ -112,7 +112,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('logout') }}" >
             <div class="navbar-profile">
-              <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ auth()->user()->name }}</p>
+              <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ auth()->user() ?  auth()->user()->name : " "}}</p>
             </div>
           </a>
         </li>

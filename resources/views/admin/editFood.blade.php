@@ -10,29 +10,28 @@
         <div class="content-wrapper">
             <div class="row ">
                 <div class="addFood-form">
-                            <form action="{{ route('uploadFood') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('uploadEditFood',$Food->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <h4>Add New Food</h4>
+                                <h4>Edit Food Details</h4>
                                 <div class="login-inputs">
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" placeholder="Enter Name" @error("name") class="input-error-border"@enderror>
-                                    @error('name')<p class="input-error">{{ $message }}</p>@enderror
+                                    <input type="text" name="name" value="{{ $Food->Title }}" placeholder="Enter Name">
                                 </div>
                         
                                 <div class="login-inputs">
                                     <label for="phone">Price</label>
-                                    <input type="text" name="price" placeholder="Enter Phone Number" @error("price") class="input-error-border"@enderror>
-                                    @error('phone')<p class="input-error">{{ $message }}</p>@enderror
+                                    <input type="text" name="price" placeholder="Enter Phone Number" value="{{ $Food->price }}">
+                                   
                                 </div>
                         
                                 <div class="login-inputs">
                                     <label for="description">Description</label>
-                                    <input type="text" name="description" placeholder="Enter Email" @error("description") class="input-error-border"@enderror>
-                                    @error('email')<p class="input-error">{{ $message }}</p>@enderror
+                                    <input type="text" name="description" placeholder="Enter Description" value="{{ $Food->description }}">
                                 </div>
                                 <div class="login-inputs">
-                                    <label for="description">Description</label>
-                                    <select name="category" id="">
+                                    <label for="description">Category</label>
+                                    <select name="category" id="" >
+                                        <option value="{{ $Food->category }}">{{ $Food->category }}</option>
                                         <option value="Fried Rice">Fried Rice</option>
                                         <option value="Noodles">Noodles</option>
                                         <option value="Chinese Non Veg">Chinese Non Veg</option>
@@ -51,13 +50,14 @@
                                 </div>
                         
                                 <div class="login-inputs">
-                                    <label for="password">Image</label>
-                                    <input type="file" name="image" >
-                                    @error('image')<p class="input-error">{{ $message }}</p>@enderror
+                                    <img src="{{ asset('foodImage/'.$Food->image_path) }}" alt="">
                                 </div>
-                        
+
+                                <div class="login-inputs">
+                                    <label for="password">Add new Image</label>
+                                    <input type="file" name="image">
+                                </div>
                                 <input type="submit" value="Add New Food" class="login-submit">
-        
                             </form>
                 </div>
             </div>
