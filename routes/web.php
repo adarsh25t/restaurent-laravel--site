@@ -36,12 +36,11 @@ Route::get('/login',[LoginController::class,"index"])->name('login');
 Route::post('/login',[LoginController::class,"store"]);
 Route::get('/logout',[LogoutController::class,"store"])->name('logout');
 
-
-
-
 Route::group(['middleware' => ['auth','isAdmin']],function(){
     Route::get('/admins',[AdminController::class,"index"])->name('admin');
 });
+
+// admin sections
 
 Route::get('/AllUsers',[AdminController::class,"user"])->name('AllUsers');
 Route::get('/deleteUser/{id}',[AdminController::class,"deleteUser"])->name('deleteUser');
@@ -49,7 +48,12 @@ Route::get('/deleteUser/{id}',[AdminController::class,"deleteUser"])->name('dele
 Route::get('/AllFoods',[AdminController::class,"AllFood"])->name('AllFood');
 Route::get('/AddFood',[AdminController::class,"addFood"])->name('AddFood');
 
+Route::get('/viewReservation',[AdminController::class,"viewReservation"])->name('viewReservation');
+
 Route::post('/uploadFood',[AdminController::class,"uploadFood"])->name('uploadFood');
 Route::get('/editFood/{id}',[AdminController::class,"editFood"])->name('editFood');
 Route::post('/editFood/{id}',[AdminController::class,"uploadEditFood"])->name('uploadEditFood');
 Route::get('/deleteFood/{id}',[AdminController::class,"deleteFood"])->name('deleteFood');
+
+// user section
+Route::post('/reservation',[AdminController::class,"addReservation"])->name('addReservation');
