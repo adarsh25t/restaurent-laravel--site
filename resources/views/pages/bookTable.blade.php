@@ -17,21 +17,22 @@
         </div>
     </div>
     <div class="booking-right">
-        <form action="">
+        <form action="{{ route('addReservation') }}" method="POST">
+            @csrf
             <h3 class="booking-title">Table Reservation</h3>
             <div class="booking-input">
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email Address">
+                <input type="text" placeholder="Your Name" name="name">
+                <input type="text" placeholder="Your Email Address" name="email">
             </div>
             <div class="booking-input">
-                <input type="text" placeholder="Phone Number">
-                <input type="text" placeholder="Number Of Guests">
+                <input type="text" placeholder="Phone Number" name="phone">
+                <input type="text" placeholder="Number Of Guests" name="guest">
             </div>  
             <div class="booking-input">
-                <input type="date">
-                <input type="time">
+                <input type="date" name="date">
+                <input type="time" name="time">
             </div>    
-            <textarea name="" id="" ></textarea>
+            <textarea name="message" id="" ></textarea>
             <input type="submit" class="booking-btn" value="Make A Reservation">
         </form>
     </div>
