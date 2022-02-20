@@ -250,7 +250,64 @@ nav ul li a.active{
     font-family: 'Poppins', sans-serif;
     box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.664);
 }
-
+.modal-header button{
+    background-color: var(--button-color) !important;
+    color: var(--text-color);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.modal-body{
+    display: flex;
+    align-items: center;
+}
+.menu_modal_details{
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.menu_modal_image{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.model_food_name{
+    font-size: 25px;
+    color: var(--logo-color);
+}
+.model_food_category{
+    font-size: 14px;
+    color: var(--light-dark);
+}
+.model_food_price{
+    font-size: 17px;
+    color: var(--button-color);
+}
+.menu_modal_footer{
+    display: flex;
+    justify-content: space-between !important;
+    font-family: 'Poppins', sans-serif;
+}
+.menu_modal_footer label{
+    font-size: 14px;
+    color: var(--light-color);
+}
+.menu_modal_footer input{
+    width: 50px;
+}
+.menu_total{
+    font-size: 16px;
+}
+.menu_total span{
+    color: var(--button-color);
+}
+.modal-footer button{
+    background-color: var(--button-color) ;
+    color: var(--text-color) ;
+    border: none;
+    padding: 7px 16px;
+    font-family: 'Poppins', sans-serif;
+}
 /* -------------  -------------  -------------- our chef page  -------------  -------------  -----------------*/
 
 .Chef{

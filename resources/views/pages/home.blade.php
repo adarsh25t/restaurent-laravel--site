@@ -64,28 +64,15 @@
     <h3 class="title">Our menu</h3>
     <h4 class="sub-title">Our selection of food with quality taste</h4>
     <div class="menu_items">
-        <div class="menu_item">
-            <img src="{{ asset("images/menu-1.jpg") }}" alt="">
-            <h5>Burger</h5>
-            <span>10$</span>
-        </div>
-        <div class="menu_item">
-            <img src="{{ asset("images/menu-2.jpg") }}" alt="">
-            <h5>Hawaiian Chicken PizzaSmoked</h5>
-            <span>20$</span>
-        </div>
-        <div class="menu_item">
-            <img src="{{ asset("images/menu-1.jpg") }}" alt="">
-            <h5>Burger</h5>
-            <span>6$</span>
-        </div>
-        <div class="menu_item">
-            <img src="{{ asset("images/menu-2.jpg") }}" alt="">
-            <h5>Hawaiian Chicken PizzaSmoked</h5>
-            <span>10$</span>
-        </div>
+       @foreach ($foods as $food)
+            <a class="menu_item" href="{{ route('menu') }}">
+                <img src="{{ asset('foodImage/'.$food->image_path) }}" alt="">
+                <h5>{{ $food->Title }}</h5>
+                <span>{{ $food->price }}</span>
+            </a>
+       @endforeach
     </div>
-    <button class="view-menu">View More Menu</button>
+    <button class="view-menu"><a href="{{ route('menu') }}">View More Menu</a></button>
 </div>
 {{-- book_a_table --}}
 <div class="book_a_table">
