@@ -12,7 +12,7 @@
         <div class="category"><span>category 5</span></div>
     </div>
     <div class="menu-list">
-        @foreach ($foods as $food)
+        @foreach ($Foods as $food)
         <div class="list-menu" data-food="{{ $food }}">
             <div class="menu-image">
                  <img src="{{ asset('foodImage/'.$food->image_path) }}" alt="" class="image">
@@ -37,24 +37,28 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-            <img src="" alt="" class="menu_modal_image">
-            <div class="menu_modal_details">
-                <h3 class="model_food_name"></h3>
-                <h3 class="model_food_category"></h3>
-                <h3 class="model_food_price">Rs<span></span></h3>
+        <form action="{{ route('addtocart') }}" method="POST">
+            @csrf
+            <div class="modal-body">
+                <input type="text" name="foodId" class="foodId" hidden>
+                <img src="" alt="" class="menu_modal_image">
+                <div class="menu_modal_details">
+                    <h3 class="model_food_name"></h3>
+                    <h3 class="model_food_category"></h3>
+                    <h3 class="model_food_price">Rs<span></span></h3>
+                </div>
             </div>
-        </div>
-        <div class="modal-footer menu_modal_footer">
-            <div class="qty">
-                <label for="Quantity">Quantity</label>
-                <input type="number" name="Quantity" value="1" id="Quantity">
+            <div class="modal-footer menu_modal_footer">
+                <div class="qty">
+                    <label for="Quantity">Quantity</label>
+                    <input type="number" name="Quantity" value="1" id="Quantity">
+                </div>
+                <h4 class="menu_total" name="total">Total <span></span></h4>
             </div>
-            <h4 class="menu_total">Total <span></span></h4>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="button">Add to Cart</button>
-          </div>
+            <div class="modal-footer">
+                <input type="submit" class="button" value="Add To Cart"></button>
+              </div>
+        </form>
       </div>
     </div>
   </div>
@@ -68,7 +72,7 @@
         $(".menu-list").on('click','.list-menu',function(event){
             $("#exampleModal").modal('show');
             food = $(this).data('food').image_path
-            console.log($(this).data('food'));
+            $(".foodId").val($(this).data('food').id)
 
             var imag=$(this).data('food').image_path
 	        var image_path="{{asset('foodImage')}}/";

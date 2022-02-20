@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/tableBook',[TableBookingController::class,'index'])->name('tableBook');
 Route::get('/menu',[MenuController::class,"index"])->name('menu');
-Route::get('/cart',[CartController::class,"index"])->name('cart');
+Route::get('/cart/{id}',[CartController::class,"index"])->name('cart');
 Route::get('/alert',[AlertPageController::class,"index"])->name('alert');
 
 // Authentication Routes
@@ -64,3 +64,5 @@ Route::get('/deleteChef/{id}',[AdminController::class,"deleteChef"])->name('dele
 
 // user section
 Route::post('/reservation',[AdminController::class,"addReservation"])->name('addReservation');
+Route::post('/addtocart',[MenuController::class,"addtocart"])->name('addtocart');
+Route::get('/removetocart/{id}',[CartController::class,"removeCart"])->name('removeCart');

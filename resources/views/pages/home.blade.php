@@ -64,7 +64,7 @@
     <h3 class="title">Our menu</h3>
     <h4 class="sub-title">Our selection of food with quality taste</h4>
     <div class="menu_items">
-       @foreach ($foods as $food)
+       @foreach ($Foods as $food)
             <a class="menu_item" href="{{ route('menu') }}">
                 <img src="{{ asset('foodImage/'.$food->image_path) }}" alt="">
                 <h5>{{ $food->Title }}</h5>

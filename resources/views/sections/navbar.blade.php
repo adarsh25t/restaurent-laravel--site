@@ -19,12 +19,12 @@
         @endguest
 
         @auth
-            <a href="{{ route('alert') }}"><i class="far fa-bell"></i></a>
+            <a href="{{ route('alert') }}"><i class="far fa-bell">({{ $count }})</i></a>
             <img src="{{ asset('images/chef-1.jpg') }}" alt="" class="user-image">
             <div class="sub-nav">
                 <a href="">{{ auth()->user()->name }}</a>
                 <a href="">Profile</a>
-                <a href="">Cart</a>
+                <a href="{{ route('cart',auth()->user()->id) }}">Cart</a>
                 <a href="">Your Orders</a>
                 <a href="{{ route('logout') }}">Logout</a>
             </div>
