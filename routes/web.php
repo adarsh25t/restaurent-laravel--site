@@ -47,6 +47,7 @@ Route::get('/deleteUser/{id}',[AdminController::class,"deleteUser"])->name('dele
 
 Route::get('/AllFoods',[AdminController::class,"AllFood"])->name('AllFood');
 Route::get('/AddFood',[AdminController::class,"addFood"])->name('AddFood');
+Route::get('/orders',[AdminController::class,"orders"])->name('orders');
 
 Route::get('/viewReservation',[AdminController::class,"viewReservation"])->name('viewReservation');
 
