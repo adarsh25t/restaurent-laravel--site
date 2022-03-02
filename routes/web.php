@@ -66,3 +66,4 @@ Route::get('/deleteChef/{id}',[AdminController::class,"deleteChef"])->name('dele
 Route::post('/reservation',[AdminController::class,"addReservation"])->name('addReservation');
 Route::post('/addtocart',[MenuController::class,"addtocart"])->name('addtocart');
 Route::get('/removetocart/{id}',[CartController::class,"removeCart"])->name('removeCart');
+Route::post('/confirmorder',[CartController::class,"confirm"])->name('confirmOrder');

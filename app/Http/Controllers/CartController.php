@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -27,6 +28,22 @@ class CartController extends Controller
     {
         $cart = Cart::find($id);
         $cart->delete();
+        return redirect()->back();
+    }
+
+    public function confirm(Request $request){
+
+        foreach ($request->foodname as $key => $foodname) {
+            
+            $order = Order::create([
+                "foodName"=>$foodname,
+                "price"=>$request->foodprice[$key],
+                "quantity"=>$request->foodquantity[$key],
+                "name"=>$request->name,
+                "phone"=>$request->phone,
+                "address"=>$request->address
+            ]);
+        }
 
         return redirect()->back();
     }

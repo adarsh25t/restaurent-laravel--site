@@ -722,16 +722,16 @@ nav ul li a.active{
     border: none;
     margin-left: 25%;
 }
-.conform-order form{
+.conform-order{
     display: flex;
     flex-direction: column;
 }
-.conform-order form label{
+.conform-order label{
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     margin-top: 6px;
 }
-.conform-order form input{
+.conform-order input{
     width: 100%;
     height: 40px;
     font-family: 'Poppins', sans-serif;
