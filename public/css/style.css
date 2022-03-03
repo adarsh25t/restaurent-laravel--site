@@ -9,6 +9,7 @@
 }
 
 /* --------------------  ------------common --------------------------------- */
+
 .title{
     font-family: 'Poppins', sans-serif !important;
     font-size: 24px;
@@ -61,6 +62,20 @@ nav ul li a.active{
     margin-right: 10px;
     font-size: 18px;
     color: var(--logo-color);
+}
+.send-message{
+    position: absolute;
+    right: 50px;
+    width: 400px;
+    height: auto;
+    z-index: 100;
+    padding: 15px;
+    background-color: var(--text-color);
+    top: 60px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.938);
+}
+.send-message h4{
+    font-size: 14px;
 }
 .authentication{
     position: relative;
@@ -132,6 +147,10 @@ nav ul li a.active{
     font-family: 'Cookie', cursive;
     color: var(--logo-color);
     font-size: 60px;
+}
+.carousel-caption a{
+    text-decoration: none !important;
+    color: var(--text-color) !important;
 }
 .carousel-caption .sub-titles{
     color: var(--text-color);
@@ -249,6 +268,13 @@ nav ul li a.active{
     padding: 10px 35px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.664);
+}
+.view-menu a{
+    text-decoration: none !important;
+    color: var(--text-color);
+}
+.view-menu a:hover{
+    color: var(--text-color);
 }
 .modal-header button{
     background-color: var(--button-color) !important;
@@ -547,7 +573,7 @@ nav ul li a.active{
     margin-top: 50px;
 }
 .search_menu .search_item{
-    width: 300px;
+    width: 90%;
     padding: 8px 10px;
     outline: none;
     border-radius: 5px;
@@ -571,13 +597,14 @@ nav ul li a.active{
 .menu-category .category{
     margin-left: 15px;
 }
-.menu-category .category a{
+.menu-category .category input[type="submit"]{
     color: var(--button-color);
     font-family: 'Poppins', sans-serif;
     border: 1px solid var(--light-dark);
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
+    background-color: var(--text-color);
 }
 .menu-category .category a:hover{
     background-color: var(--button-color);

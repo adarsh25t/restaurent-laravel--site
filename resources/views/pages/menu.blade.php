@@ -11,13 +11,7 @@
         <input type="submit" value="Search Food" class="search_btn">
     </form>
 
-    <div class="menu-category">
-        <div class="category"><a href="">Biriyani 0</a></div>
-        <div class="category"><a href="">Arabic Grill</a></div>
-        <div class="category"><a href="">Biriyani</a></div>
-        <div class="category"><a href="">Biriyani 2</a></div>
-        <div class="category"><a href="">Biriyani 1</a></div>
-    </div>
+    @include('sections.menuCategory')
 
     <div class="menu-list">
         @if (count($Foods) > 0)

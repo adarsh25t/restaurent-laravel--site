@@ -17,7 +17,7 @@
             <div class="carousel-caption d-none d-md-block">
               <h5 class="titles">Chops & Hops</h5>
               <p class="sub-titles">THE BEST EXPERIENCE</p>
-              <button class="booking-table">Book Your Table</button>
+              <button class="booking-table"><a href="{{ route('menu') }}">Book Your Table</a></button>
             </div>
           </div>
           <div class="carousel-item">
@@ -64,13 +64,15 @@
     <h3 class="title">Our menu</h3>
     <h4 class="sub-title">Our selection of food with quality taste</h4>
     <div class="menu_items">
-       @foreach ($Foods as $food)
-            <a class="menu_item" href="{{ route('menu') }}">
-                <img src="{{ asset('foodImage/'.$food->image_path) }}" alt="">
-                <h5>{{ $food->Title }}</h5>
-                <span>{{ $food->price }}</span>
-            </a>
-       @endforeach
+       @if (count($Foods) > 4)
+            @foreach ($Foods as $food)
+                <a class="menu_item" href="{{ route('menu') }}">
+                    <img src="{{ asset('foodImage/'.$food->image_path) }}" alt="">
+                    <h5>{{ $food->Title }}</h5>
+                    <span>{{ $food->price }}</span>
+                </a>
+            @endforeach
+       @endif
     </div>
     <button class="view-menu"><a href="{{ route('menu') }}">View More Menu</a></button>
 </div>
