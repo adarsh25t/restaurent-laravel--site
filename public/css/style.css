@@ -546,19 +546,57 @@ nav ul li a.active{
     padding-right: 50px;
     margin-top: 50px;
 }
+.search_menu .search_item{
+    width: 300px;
+    padding: 8px 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--light-dark);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.search_btn{
+    padding: 7px 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: 4px 4px 5px rgba(36, 35, 35, 0.904);
+}
 .menu-category{
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 .menu-category .category{
     margin-left: 15px;
 }
-.menu-category .category span{
+.menu-category .category a{
     color: var(--button-color);
     font-family: 'Poppins', sans-serif;
     border: 1px solid var(--light-dark);
     padding: 10px 15px;
     border-radius: 5px;
+    text-decoration: none;
+}
+.menu-category .category a:hover{
+    background-color: var(--button-color);
+    color: var(--text-color);
+}
+.noFood{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noFood h4{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--button-color);
+    padding: 10px 25px;
+    color: var(--text-color);
+    font-size: 18px;
+    box-shadow: 5px 5px 5px rgba(36, 35, 35, 0.904);
 }
 .menu-list{
     display: flex;

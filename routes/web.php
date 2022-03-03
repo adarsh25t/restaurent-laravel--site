@@ -68,3 +68,5 @@ Route::post('/reservation',[AdminController::class,"addReservation"])->name('add
 Route::post('/addtocart',[MenuController::class,"addtocart"])->name('addtocart');
 Route::get('/removetocart/{id}',[CartController::class,"removeCart"])->name('removeCart');
 Route::post('/confirmorder',[CartController::class,"confirm"])->name('confirmOrder');
+
+Route::post('/search',[MenuController::class,'searchMenu'])->name('search');

@@ -4,26 +4,40 @@
 @section("menu")
 
 <div class="menu-wrapper">
+
+    <form action="{{ route('search') }}" method="POST" class="search_menu">
+        @csrf
+        <input type="text" name="searchMenu" class="search_item" placeholder="Food Name or Category">
+        <input type="submit" value="Search Food" class="search_btn">
+    </form>
+
     <div class="menu-category">
-        <div class="category"><span>category 1</span></div>
-        <div class="category"><span>category 2</span></div>
-        <div class="category"><span>category 3</span></div>
-        <div class="category"><span>category 4</span></div>
-        <div class="category"><span>category 5</span></div>
+        <div class="category"><a href="">Biriyani 0</a></div>
+        <div class="category"><a href="">Arabic Grill</a></div>
+        <div class="category"><a href="">Biriyani</a></div>
+        <div class="category"><a href="">Biriyani 2</a></div>
+        <div class="category"><a href="">Biriyani 1</a></div>
     </div>
+
     <div class="menu-list">
-        @foreach ($Foods as $food)
-        <div class="list-menu" data-food="{{ $food }}">
-            <div class="menu-image">
-                 <img src="{{ asset('foodImage/'.$food->image_path) }}" alt="" class="image">
+        @if (count($Foods) > 0)
+            @foreach ($Foods as $food)
+            <div class="list-menu" data-food="{{ $food }}">
+                <div class="menu-image">
+                    <img src="{{ asset('foodImage/'.$food->image_path) }}" alt="" class="image">
+                </div>
+                <div class="menu-details">
+                    <h4 class="foodname">{{ $food->Title }}</h4>
+                    <span class="category cate" id="categorys">{{ $food->category }}</span><br>
+                    <span>{{ $food->price }}</span>
+                </div>
             </div>
-             <div class="menu-details">
-                 <h4 class="foodname">{{ $food->Title }}</h4>
-                 <span class="category cate" id="categorys">{{ $food->category }}</span><br>
-                 <span>{{ $food->price }}</span>
-             </div>
-        </div>
-        @endforeach
+            @endforeach 
+        @else
+            <div class="noFood">
+                <h4>No Food Is Found!</h4>
+            </div>
+        @endif
     </div>
 </div>
 

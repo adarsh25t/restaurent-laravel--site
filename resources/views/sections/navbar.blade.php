@@ -19,7 +19,7 @@
         @endguest
 
         @auth
-            <a href="{{ route('alert') }}"><i class="far fa-bell">({{ $count }})</i></a>
+            <a href="{{ route('alert') }}"><i class="far fa-bell"></i></a>
             <img src="{{ asset('images/chef-1.jpg') }}" alt="" class="user-image">
             <div class="sub-nav">
                 <a href="">{{ auth()->user()->name }}</a>

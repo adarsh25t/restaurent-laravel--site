@@ -42,4 +42,13 @@ class MenuController extends Controller
             return redirect()->route('login');
         }
     }
+
+    public function searchMenu(Request $request){
+        $search = $request->searchMenu;
+        $Foods = Food::where('Title','Like','%'.$search.'%')
+                        ->orWhere('category', 'LIKE', '%'.$search.'%') 
+                        ->get();
+
+        return view('pages.menu',compact('Foods'));
+    }
 }
